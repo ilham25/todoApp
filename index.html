@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/8b1a664061.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>To-Do List Creator</title>
+  </head>
+  <body>
+    <header>
+      <div class="jumbotron">
+        <h1>To-Do List Creator</h1>
+        <h2><i class="fas fa-clipboard-list"></i></h2>
+        <p class="txt-purple">Here you can make your own to-do list!</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#activity">My Activity</a></li>
+          <li>/</li>
+          <li><a href="#about">About Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="content"></div>
+      <div>
+        <article class="todo-modal disp-none" id="todo-modal">
+          <header>
+            <div class="modal-header">
+              <h2>Add Activity</h2>
+            </div>
+          </header>
+          <label for="act1" class="txt-purple-sec">Activity 1</label>
+          <input type="text" name="act1" id="act1" />
+          <label for="act2" class="txt-purple-sec">Activity 2</label>
+          <input type="text" name="act2" id="act2" />
+          <label for="act3" class="txt-purple-sec" r>Activity 3</label>
+          <input type="text" name="act3" id="act3" />
+          <label for="act4" class="txt-purple-sec">Activity 4</label>
+          <input type="text" name="act4" id="act4" />
+          <label for="act5" class="txt-purple-sec">Activity 5</label>
+          <input type="text" name="act5" id="act5" />
+          <label for="tagColor" class="txt-purple">Select Color</label>
+          <select name="tagColor" id="tagColor">
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="purple">Purple</option>
+          </select>
+          <input type="button" id="submitBtn" value="Submit" />
+          <input type="button" id="cancelBtn" value="Cancel" />
+        </article>
+
+        <div class="action-button" id="action-button"><p>+</p></div>
+      </div>
+      <aside>
+        <article class="card bl-red" id="tools">
+          <header>
+            <h2 class="txt-red">Tools</h2>
+          </header>
+          <section>
+            <p class="btn-add" id="btnAdd">Reset List</p>
+          </section>
+        </article>
+      </aside>
+      <aside>
+        <article class="card bl-green" id="about">
+          <header>
+            <h2 class="txt-green">About Me</h2>
+            <figure>
+              <img src="assets/images/foto.png" alt="profil" />
+              <figcaption><h3>Ilham Adiputra</h3></figcaption>
+              <figcaption>
+                <p class="txt-sec-color">Junior Full-Stack Developer</p>
+                <a
+                  href="https://github.com/ilham25"
+                  class="txt-sec-color"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://web.facebook.com/iruhamudesu"
+                  class="txt-sec-color"
+                  target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </figcaption>
+            </figure>
+          </header>
+        </article>
+      </aside>
+    </main>
+    <footer>
+      <p>To-Do List Creator &copy; Ilham Adiputra</p>
+    </footer>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/submission.js"></script>
+  </body>
+</html>
