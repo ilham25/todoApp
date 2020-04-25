@@ -103,7 +103,7 @@ function clearForm() {
   color.value = "red";
 }
 
-submitButton.addEventListener("click", function (e) {
+function submitProcess() {
   activityData.act1 = act1.value;
   activityData.act2 = act2.value;
   activityData.act3 = act3.value;
@@ -117,4 +117,18 @@ submitButton.addEventListener("click", function (e) {
   clearForm();
   alert("Your to-do list created successfully!");
   hideModal();
+}
+
+submitButton.addEventListener("click", function (e) {
+  if (
+    act1.value == "" ||
+    act2.value == "" ||
+    act3.value == "" ||
+    act4.value == "" ||
+    act5.value == ""
+  ) {
+    alert("You must insert all activities, or insert -");
+  } else {
+    submitProcess();
+  }
 });

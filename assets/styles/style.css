@@ -1,10 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
 html {
   scroll-behavior: smooth;
 }
 
 * {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
 }
 body {
   font-family: "Nunito", serif;
@@ -188,7 +200,7 @@ label {
 nav li {
   display: inline;
   list-style-type: none;
-  margin-right: 20px;
+  margin: 0 5px;
 }
 
 nav ul {
@@ -247,8 +259,22 @@ input[type="text"] {
   color: white;
   margin: 5px 0;
 }
+figcaption p {
+  font-family: "Montserrat";
+  font-weight: 300;
+}
+
+.disp-2 {
+  font-size: 1.5em;
+  margin: 0 3px;
+}
+
+.disp-2:hover {
+  color: white;
+}
 
 input[type="button"] {
+  font-family: "Nunito", sans-serif;
   float: right;
   cursor: pointer;
   border-radius: 5px;
@@ -332,7 +358,7 @@ section ul li {
   }
 
   .action-button {
-    left: 85%;
+    left: 80%;
   }
 }
 
