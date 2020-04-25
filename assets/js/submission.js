@@ -26,31 +26,31 @@ const color = document.getElementById("tagColor");
 const d = new Date();
 
 function getNowTime() {
-  return d.getHours() + ":" + d.getMinutes();
+  return d.toLocaleTimeString();
 }
 
 function getNowDay(dayIndex) {
   switch (dayIndex) {
     case 1:
-      return "Senin";
+      return "Monday";
       break;
     case 2:
-      return "Selasa";
+      return "Tuesday";
       break;
     case 3:
-      return "Rabu";
+      return "Wednesday";
       break;
     case 4:
-      return "Kamis";
+      return "Thursday";
       break;
     case 5:
-      return "Jum'at";
+      return "Friday";
       break;
     case 6:
-      return "Sabtu";
+      return "Saturday";
       break;
     case 7:
-      return "Minggu";
+      return "Sunday";
       break;
 
     default:
