@@ -173,8 +173,9 @@ label {
   position: fixed;
 
   top: 80%;
-  left: 50%;
-  margin-left: -25px;
+  left: 85%;
+  /* left: 50%; */
+  /* margin-left: -25px; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
   cursor: pointer;

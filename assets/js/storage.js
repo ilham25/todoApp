@@ -119,7 +119,11 @@ function renderHistory() {
       historyList.appendChild(article);
     }
   } else {
-    historyList.innerHTML += `<article class="card bl-purple"><header><h2>Your to-do list is empty, click the + button in the middle to insert your to-do list!</h2></header></article>`;
+    if (window.innerWidth <= 1024) {
+      historyList.innerHTML += `<article class="card bl-purple"><header><h2>Your to-do list is empty, click the + button in the bottom-right corner to insert your to-do list!</h2></header></article>`;
+    } else {
+      historyList.innerHTML += `<article class="card bl-purple"><header><h2>Your to-do list is empty, click the + button in the middle to insert your to-do list!</h2></header></article>`;
+    }
   }
 }
 
