@@ -147,27 +147,6 @@ aside header {
   font-weight: 300;
 }
 
-.btn-delete {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #ff6b7a;
-  color: white;
-  margin: 20px auto 0 auto;
-}
-
-.btn-delete:hover {
-  cursor: pointer;
-  background-color: #ff8591;
-}
-
-.btn-delete p {
-  text-align: center;
-  line-height: 40px;
-}
-
 .todo-modal {
   width: 800px;
   height: 600px;
