@@ -1,3 +1,5 @@
+// Untuk melihat rekam jejak, silahkan kunjungi repo https://github.com/ilham25/ilham25.github.io
+
 const CACHE_KEY = "todo_history";
 
 function storageCheck() {
@@ -31,7 +33,15 @@ function showHistory() {
   }
 }
 
-function articleElement(faCalendarDay, day, faClock, time, tagColor, activity) {
+function articleElement(
+  listId,
+  faCalendarDay,
+  day,
+  faClock,
+  time,
+  tagColor,
+  activity
+) {
   return `<header>
         <div class='card-header'>
           <h2>${faCalendarDay}${day}</h2>
@@ -64,6 +74,7 @@ function renderHistory() {
       let article = document.createElement("article");
       article.classList.add("card", `bl-${history.tagColor}`);
       article.innerHTML = articleElement(
+        history.id,
         faCalendarDay,
         history.day,
         faClock,

@@ -67,6 +67,7 @@ function hideModal() {
 
 resetButton.addEventListener("click", function (e) {
   if (confirm("Are you sure want to reset your to-do list?")) {
+    activityData.id = 0;
     localStorage.removeItem(CACHE_KEY);
   }
   renderHistory();
@@ -81,7 +82,7 @@ cancelButton.addEventListener("click", function (e) {
 });
 
 function clearForm() {
-  activityData.id = 0;
+  activityData.id = activityData.id;
   activityData.activity = null;
   activityData.tagColor = null;
   activityData.day = null;
@@ -96,6 +97,7 @@ function clearForm() {
 }
 
 function submitProcess() {
+  activityData.id = activityData.id + 1;
   activityData.activity = [
     act1.value,
     act2.value,
