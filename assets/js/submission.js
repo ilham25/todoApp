@@ -1,10 +1,6 @@
 const activityData = {
   id: 0,
-  act1: null,
-  act2: null,
-  act3: null,
-  act4: null,
-  act5: null,
+  activity: null,
   tagColor: null,
   day: null,
   time: null,
@@ -49,7 +45,7 @@ function getNowDay(dayIndex) {
     case 6:
       return "Saturday";
       break;
-    case 7:
+    case 0:
       return "Sunday";
       break;
 
@@ -86,11 +82,7 @@ cancelButton.addEventListener("click", function (e) {
 
 function clearForm() {
   activityData.id = 0;
-  activityData.act1 = null;
-  activityData.act2 = null;
-  activityData.act3 = null;
-  activityData.act4 = null;
-  activityData.act5 = null;
+  activityData.activity = null;
   activityData.tagColor = null;
   activityData.day = null;
   activityData.time = null;
@@ -104,11 +96,13 @@ function clearForm() {
 }
 
 function submitProcess() {
-  activityData.act1 = act1.value;
-  activityData.act2 = act2.value;
-  activityData.act3 = act3.value;
-  activityData.act4 = act4.value;
-  activityData.act5 = act5.value;
+  activityData.activity = [
+    act1.value,
+    act2.value,
+    act3.value,
+    act4.value,
+    act5.value,
+  ];
   activityData.tagColor = color.value;
   activityData.day = getNowDay(d.getDay());
   activityData.time = getNowTime();

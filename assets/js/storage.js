@@ -31,64 +31,23 @@ function showHistory() {
   }
 }
 
-function articleElement(
-  faCalendarDay,
-  day,
-  faClock,
-  time,
-  tagColor,
-  act1,
-  act2,
-  act3,
-  act4,
-  act5
-) {
-  return (
-    "<header>" +
-    "<div class='card-header'>" +
-    "<h2>" +
-    faCalendarDay +
-    day +
-    "</h2>" +
-    "<p>" +
-    faClock +
-    time +
-    "</p>" +
-    "</div>" +
-    "</header>" +
-    "<section>" +
-    "<h3 class='txt-" +
-    tagColor +
-    "'>To-do :</h3>" +
-    "<ul>" +
-    "<li class='bg-" +
-    tagColor +
-    "'>" +
-    act1 +
-    "</li>" +
-    "<li class='bg-" +
-    tagColor +
-    "'>" +
-    act2 +
-    "</li>" +
-    "<li class='bg-" +
-    tagColor +
-    "'>" +
-    act3 +
-    "</li>" +
-    "<li class='bg-" +
-    tagColor +
-    "'>" +
-    act4 +
-    "</li>" +
-    "<li class='bg-" +
-    tagColor +
-    "'>" +
-    act5 +
-    "</li>" +
-    "</ul>" +
-    "</section>"
-  );
+function articleElement(faCalendarDay, day, faClock, time, tagColor, activity) {
+  return `<header>
+        <div class='card-header'>
+          <h2>${faCalendarDay}${day}</h2>
+          <p>${faClock}${time}</p>
+        </div>
+    </header>
+    <section>
+        <h3 class='txt-${tagColor}'>To-do :</h3>
+        <ul>
+          <li class='bg-${tagColor}'>${activity[0]}</li>
+          <li class='bg-${tagColor}'>${activity[1]}</li>
+          <li class='bg-${tagColor}'>${activity[2]}</li>
+          <li class='bg-${tagColor}'>${activity[3]}</li>
+          <li class='bg-${tagColor}'>${activity[4]}</li>
+        </ul>
+    </section>`;
 }
 
 function renderHistory() {
@@ -103,18 +62,14 @@ function renderHistory() {
   if (localStorage.getItem(CACHE_KEY) !== null) {
     for (let history of todoData) {
       let article = document.createElement("article");
-      article.classList.add("card", "bl-" + history.tagColor);
+      article.classList.add("card", `bl-${history.tagColor}`);
       article.innerHTML = articleElement(
         faCalendarDay,
         history.day,
         faClock,
         history.time,
         history.tagColor,
-        history.act1,
-        history.act2,
-        history.act3,
-        history.act4,
-        history.act5
+        history.activity
       );
       historyList.appendChild(article);
     }
