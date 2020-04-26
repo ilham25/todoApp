@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
 
 html {
@@ -33,9 +32,6 @@ main {
 }
 
 #content {
-  /* float: left;
-  width: 75%; */
-
   flex-basis: 50%;
 }
 #activity {
@@ -236,7 +232,6 @@ header {
   cursor: pointer;
   background-color: #ff6b7a;
   border-radius: 20px;
-  /* color: #272730; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   list-style-type: none;
   font-weight: 700;
