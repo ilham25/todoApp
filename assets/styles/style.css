@@ -43,6 +43,11 @@ main {
   background-color: #303038;
   border-radius: 5px;
   margin-top: 20px;
+  transition: box-shadow 0.5s;
+}
+
+.card:hover {
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
 }
 
 .bl-purple {
