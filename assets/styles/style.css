@@ -228,7 +228,7 @@ nav a:hover {
 header {
   display: inline;
 }
-.btn-add {
+.btn-reset {
   cursor: pointer;
   background-color: #ff6b7a;
   border-radius: 20px;
@@ -241,7 +241,7 @@ header {
   border-radius: 20px;
 }
 
-.btn-add:hover {
+.btn-reset:hover {
   background-color: #ff8591;
 }
 input[type="text"] {

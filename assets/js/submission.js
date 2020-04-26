@@ -10,7 +10,7 @@ const actionButton = document.getElementById("action-button");
 const todoModal = document.getElementById("todo-modal");
 const cancelButton = document.getElementById("cancelBtn");
 const submitButton = document.getElementById("submitBtn");
-const addButton = document.getElementById("btnAdd");
+const resetButton = document.getElementById("btnReset");
 
 const act1 = document.getElementById("act1");
 const act2 = document.getElementById("act2");
@@ -65,7 +65,7 @@ function hideModal() {
   todoModal.classList.add("disp-none");
 }
 
-addButton.addEventListener("click", function (e) {
+resetButton.addEventListener("click", function (e) {
   if (confirm("Are you sure want to reset your to-do list?")) {
     localStorage.removeItem(CACHE_KEY);
   }
